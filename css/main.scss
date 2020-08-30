@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+$bg-color: hsl(0, 100%, 74%);
+$green: hsl(154,59%,51%);
+$blue: hsl(248,32%,49%);
+$dark-blue: hsl(249,10%,26%);
+$grayish-blue: hsl(246,25%,77%);
+
+*, html {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background-image: url('../images/bg-intro-mobile.png');
+    background-color: $bg-color;
+}
+
+/* temporary for mobile view */
+.container {
+    text-align: center;
+    margin: 0 auto;
+    padding: 4rem 2rem 1rem;
+}
+
+.left {
+    color: white;
+
+    h1 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+    }
+
+    p {
+        font-weight: 200;
+        font-style: normal;
+        font-size: .9rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.right {
+
+    .bluebox {
+        background-color: $blue;
+        color: white;
+        margin-bottom: 1rem;
+        border-radius: 5px;
+        padding: .9rem;
+        box-shadow: 0 6px 2px -2px rgba($color: $blue, $alpha: .6);
+
+        p, small {
+            font-size: .9rem;
+        }
+
+        small {
+            color: $grayish-blue;
+        }
+    }
+
+    form {
+        background-color: white;
+        border-radius: 5px;
+        padding: 1rem;
+        box-shadow: 0 6px 2px -2px rgba($color: gray, $alpha: .6);
+
+        input {
+            outline: none;
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 15px 20px;
+            font-weight: 600;
+            border: 1px solid $grayish-blue;
+            border-radius: 5px;
+            font-size: .9rem;
+            margin-bottom: .8rem;
+            color: $dark-blue;
+        }
+
+        button {
+            background-color: $green;
+            color: white;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 0;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            cursor: pointer;
+            box-shadow: 0 6px 2px -2px rgba(56,204,140,.6);
+        }
+
+        small {
+            color: $grayish-blue;
+            font-size: .8rem;
+
+            a {
+                color: $bg-color;
+                font-size: .8rem;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .container {
+        display: grid;
+        margin: 2.5rem 5rem;
+    }
+
+    .left {
+        grid-column: 1;
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+        text-align: left;
+
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+    }
+
+    .right {
+        grid-column: 2;
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+    }
+}
+
+.attribution { 
+    font-size: 11px;
+    text-align: center;
+    color: #4e4e4e9b;
+
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%); 
+    font-size: 11px;
+    color: $dark-blue;
+}
